@@ -3,8 +3,8 @@
 # Moments 交互式一键部署脚本
 # 功能：通过交互式界面收集配置信息，生成 .env 文件并启动服务
 
-# 检查是否使用 bash 执行
-if [ -z "$BASH_VERSION" ]; then
+# 检查是否使用 bash 执行（使用兼容 sh 的语法）
+if [ -z "${BASH_VERSION:-}" ]; then
     echo "错误: 此脚本需要使用 bash 执行"
     echo "请使用以下方式之一:"
     echo "  bash deploy-interactive.sh"
